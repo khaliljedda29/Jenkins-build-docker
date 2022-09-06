@@ -11,5 +11,6 @@ node {
          docker.image('khalil/nginx').withRUN('-p 80:80') { c ->
 	sh 'docker ps'
 	sh 'curl localhost'
+	 }
 }
 }
