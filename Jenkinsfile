@@ -5,7 +5,7 @@ node {
         checkout scm
 }
     stage('Build image') {
-        app = docker.build(khalil/nginx)
+        app = docker.build("khalil/nginx")
 }
     stage('Run image') {
          docker.image('khalil/nginx').withRUN('-p 80:80') { c ->
